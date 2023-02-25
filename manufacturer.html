@@ -13,139 +13,157 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* These classes are for solving issue of footer -- */
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1 0 auto;
+      }
+      .footer {
+        flex-shrink: 0;
+      }
+    </style>
     <title>Fake pd</title>
   </head>
   <body id="manufacturer-section">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <!-- <img
-            src="logo.png"
-            alt="Logo"
-            width="auto"
-            height="30"
-            class="d-inline-block align-text-top"
-          /> -->
-          <img src="./assets/logoipsum-288.svg" height="30" alt="" />
-        </a>
+    <div class="content">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <!-- <img
+              src="logo.png"
+              alt="Logo"
+              width="auto"
+              height="30"
+              class="d-inline-block align-text-top"
+            /> -->
+            <img src="./assets/logoipsum-288.svg" height="30" alt="" />
+          </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="addProduct.html">Add Product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="addSeller.html">Add Seller</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="sellProductManufacturer.html"
-                >Sell Product To Seller</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="querySeller.html">Query Seller</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero Section  -->
-    <section id="hero">
-      <div class="container col-xxl-8 px-4 py-4">
-        <div class="row align-items-center py-4">
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Manufacturer</h1>
-            <p class="lead">
-              A Blockchain based application for detecting Counterfeited
-              products in the B2C and B2B supply chain which will benefit
-              businesses in terms of growth, reputation, trust and to customers
-              in getting genuine products in hand.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <img
-              src="./assets/Supply-chain.jpg"
-              height="450x"
-              width="540px"
-              alt=""
-            />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="addProduct.html">Add Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="addSeller.html">Add Seller</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="sellProductManufacturer.html"
+                  >Sell Product To Seller</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="querySeller.html"
+                  >Query Seller</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Footer  -->
-    <div
-      class="col-12 bg-dark"
-      style="position: absolute; bottom: 0; margin-top: 40px"
-    >
-      <p class="text-light text-center">
-        Copyright © 2023, All Rights Reserved
-      </p>
-    </div>
-
-    <!-- Modal on load  -->
-    <div class="py-2">
-      <div
-        class="modal"
-        id="myModal"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-          <div class="modal-content">
-            <!-- <div>
-              <button
-                type="button"
-                class="btn-close float-end me-2 mt-2"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div> -->
-            <div
-              class="modal-body d-flex justify-content-center flex-column align-items-center"
-            >
+      <!-- Hero Section  -->
+      <section id="hero">
+        <div class="container col-md-12 px-4">
+          <div class="row align-items-center pb-4">
+            <div class="col-md-6">
+              <!-- <h5 class="h5 fw-bold lh-1 mb-3 text-primary">
+                AN UPGRADE OF TRUST
+              </h5> -->
+              <h1 class="display-5 fw-bold lh-1 mb-3" id="myHeader">
+                Manufacturer
+              </h1>
+              <p class="lead">
+                A Blockchain based application for detecting Counterfeited
+                products in the B2C and B2B supply chain which will benefit
+                businesses in terms of growth, reputation, trust and to
+                customers in getting genuine products in hand.
+              </p>
+            </div>
+            <div class="col-md-6">
               <img
-                src="./assets/wallet.gif"
-                height="200px"
-                width="200px"
+                src="./assets/Supply-chain-image.png"
                 alt=""
+                class="img-fluid"
               />
-              <div class="d-flex justify-content-center">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal on load  -->
+      <div>
+        <div
+          class="modal"
+          id="myModal"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+              <!-- <div>
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  class="btn-close float-end me-2 mt-2"
                   data-bs-dismiss="modal"
-                >
-                  Connect Wallet
-                </button>
+                  aria-label="Close"
+                ></button>
+              </div> -->
+              <div
+                class="modal-body d-flex justify-content-center flex-column align-items-center"
+              >
+                <img
+                  src="./assets/wallet.gif"
+                  height="200px"
+                  width="200px"
+                  alt=""
+                />
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                  >
+                    Connect Wallet
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Footer  -->
+    <div class="footer col-12 bg-dark text-center text-light py-1">
+      Copyright © 2023, All Rights Reserved
     </div>
 
     <script>
@@ -161,6 +179,47 @@
         myModal.toggle();
       }
     </script>
+
+    <script>
+      // Login Confirmation - change heading to welcome given address
+      var IsLoggedIn = false;
+      if (IsLoggedIn == false) {
+        document
+          .getElementById("connect-button")
+          .addEventListener("click", (event) => {
+            let account;
+            let button = event.target;
+            ethereum
+              .request({ method: "eth_requestAccounts" })
+              .then((accounts) => {
+                account = accounts[0];
+                console.log(account);
+                button.textContent = "Welcome!-->" + account;
+                IsLoggedIn = true;
+                if (IsLoggedIn) {
+                  var acc = account.slice(0, 18);
+                  myHeader.innerText = "Welcome! " + acc;
+                }
+              });
+          });
+      }
+    </script>
+
+    <!-- here in above to solve issue of footer, use flexbox 
+        wrapped content other than footer in one div having class content & 
+        remaining div is footer, use flex direction column
+
+        reference =  https://css-tricks.com/couple-takes-sticky-footer/
+    -->
+
+    <!-- <div
+      class="col-12 bg-dark"
+      style="position: absolute; bottom: 0; margin-top: 40px"
+    >
+      <p class="text-light text-center">
+        Copyright © 2023, All Rights Reserved
+      </p>
+    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="js/jquery.min.js"></script>
